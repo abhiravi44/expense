@@ -1,0 +1,23 @@
+
+{% extends 'index.html' %}
+{% block content %}
+<div class="container1">
+<form action="{% url 'login1' %}" method="POST">
+    {% csrf_token %}
+    <center style="color: bisque;">
+    {{form.as_p}} 
+    
+        <br><br><button type="submit" class="button2 ">Submit</button>
+    </center>
+
+
+</form>
+</div>
+<center style='color: bisque;'>
+{% if messages %}
+    {% for mess in messages %}
+        {{mess}}
+    {% endfor %}
+{% endif%}
+</center>
+{% endblock %}

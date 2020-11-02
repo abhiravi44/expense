@@ -1,0 +1,21 @@
+
+
+{% extends 'index.html' %}
+{% block content %}
+<div class='body2' style='color:blanchedalmond'>
+<form action="{% url 'register1' %}" method="POST">
+{% csrf_token %}
+<center>
+    <h1>Signup</h1>
+
+{% for a in f %}
+    <br>{{ a.label_tag }}
+    <br>
+    {{a}}
+{% endfor %}
+
+       <br><br> <button type="submit" class="button2 ">Submit</button>
+    </center>
+</form>
+</div>
+{% endblock %}

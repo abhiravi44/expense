@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+    .img {
+    background-image: url('../static/wp2.jpg');
+
+}
+</style>
+<div class=" body2 img">
+<form method="POST" action="{% url 'register' %}" enctype="multipart/form-data">
+    
+    
+    {% csrf_token %}
+
+
+    <div class=" " style="color:bisque;"  > 
+        {% for field in form %}
+            
+            {{field.label_tag}}
+            {{field}}
+            
+    
+        {% endfor %}
+        <br><br>
+        <center>
+        <button type="submit" class=" button2 ">Submit</button>
+        </center>
+    </div>
+    
+</form>
+</div>
+{% endblock %}

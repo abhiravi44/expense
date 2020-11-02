@@ -1,0 +1,28 @@
+{% extends 'expense.html' %}
+{% block content %}
+<style>
+    body3{
+    border: ridge;
+    padding: 23px;
+    margin: 5% auto 0;
+    background-image: url('..static/w2.jpg');
+    border-radius: 24px;
+    height: 350px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    background-size: 100% auto;
+
+    }
+</style>
+<form method='POST' action="{% url 'saverec' %}">
+    {% csrf_token %}
+    <div class="body2" style="color: blanchedalmond;">
+        {{form.as_p}}
+        <button type="submit" class="button2">Submit</button>
+    </div>
+    
+    
+</form>
+
+{% endblock %}
