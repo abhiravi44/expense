@@ -5,5 +5,5 @@ from . models import *
 admin.site.register(Users)
 admin.site.register(record)
 admin.site.register(newusers)
-admin.site.register(new1)
+# admin.site.register(new1)
 # Register your models here.
